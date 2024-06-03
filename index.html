@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Web Toolkit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Fun Web Toolkit</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('home')">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('text_manipulation')">Text Manipulation</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('calculator')">Calculator</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('guessing_game')">Guessing Game</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-4" id="content">
+        <div id="home" class="section">
+            <div class="jumbotron">
+                <h1 class="display-4">Welcome to the Fun Web Toolkit!</h1>
+                <p class="lead">This project demonstrates basic functionalities using HTML, CSS, and JavaScript.</p>
+                <hr class="my-4">
+                <p>Choose a functionality from the navigation bar to get started.</p>
+            </div>
+        </div>
+        <div id="text_manipulation" class="section" style="display: none;">
+            <h2>Text Manipulation</h2>
+            <form id="textManipulationForm">
+                <div class="form-group">
+                    <label for="text">Enter Text:</label>
+                    <input type="text" class="form-control" id="text" required>
+                </div>
+                <div class="form-group">
+                    <label for="choice">Choose Conversion:</label>
+                    <select class="form-control" id="choice">
+                        <option value="camel_to_snake">CamelCase to snake_case</option>
+                        <option value="snake_to_camel">snake_case to CamelCase</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Convert</button>
+            </form>
+            <h3 class="mt-4" id="textResult"></h3>
+        </div>
+        <div id="calculator" class="section" style="display: none;">
+            <h2>Calculator</h2>
+            <form id="calculatorForm">
+                <div class="form-group">
+                    <label for="expression">Enter Expression (e.g., 2 + 2):</label>
+                    <input type="text" class="form-control" id="expression" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate</button>
+            </form>
+            <h3 class="mt-4" id="calcResult"></h3>
+        </div>
+        <div id="guessing_game" class="section" style="display: none;">
+            <h2>Number Guessing Game</h2>
+            <form id="guessingGameForm">
+                <input type="hidden" id="number">
+                <input type="hidden" id="attempts" value="0">
+                <div class="form-group">
+                    <label for="guess">Enter your guess (between 1 and 100):</label>
+                    <input type="number" class="form-control" id="guess" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <h3 class="mt-4" id="gameResult"></h3>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/text_manipulation.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/guessing_game.js"></script>
+</body>
+</html>
