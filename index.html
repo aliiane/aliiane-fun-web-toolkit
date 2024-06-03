@@ -10,7 +10,10 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Fun Web Toolkit</a>
-        <div class="collapse navbar-collapse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('home')">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('text_manipulation')">Text Manipulation</a></li>
@@ -20,7 +23,7 @@
         </div>
     </nav>
     <div class="container mt-4" id="content">
-        <div id="home" class="section">
+        <div id="home" class="section active">
             <div class="jumbotron">
                 <h1 class="display-4">Welcome to the Fun Web Toolkit!</h1>
                 <p class="lead">This project demonstrates basic functionalities using HTML, CSS, and JavaScript.</p>
@@ -28,7 +31,7 @@
                 <p>Choose a functionality from the navigation bar to get started.</p>
             </div>
         </div>
-        <div id="text_manipulation" class="section" style="display: none;">
+        <div id="text_manipulation" class="section">
             <h2>Text Manipulation</h2>
             <form id="textManipulationForm">
                 <div class="form-group">
@@ -46,7 +49,7 @@
             </form>
             <h3 class="mt-4" id="textResult"></h3>
         </div>
-        <div id="calculator" class="section" style="display: none;">
+        <div id="calculator" class="section">
             <h2>Calculator</h2>
             <form id="calculatorForm">
                 <div class="form-group">
@@ -57,7 +60,7 @@
             </form>
             <h3 class="mt-4" id="calcResult"></h3>
         </div>
-        <div id="guessing_game" class="section" style="display: none;">
+        <div id="guessing_game" class="section">
             <h2>Number Guessing Game</h2>
             <form id="guessingGameForm">
                 <input type="hidden" id="number">
@@ -75,5 +78,8 @@
     <script src="js/text_manipulation.js"></script>
     <script src="js/calculator.js"></script>
     <script src="js/guessing_game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

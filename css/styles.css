@@ -9,3 +9,16 @@ body {
 .section.active {
     display: block;
 }
+
+.container {
+    max-width: 100%;
+    padding: 15px;
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    cursor: pointer;
+}
